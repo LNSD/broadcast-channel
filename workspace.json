@@ -1,4 +1,6 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "broadcast-channel": "packages/broadcast-channel"
+  }
 }

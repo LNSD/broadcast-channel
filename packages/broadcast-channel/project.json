@@ -1,0 +1,33 @@
+{
+  "root": "packages/broadcast-channel",
+  "sourceRoot": "packages/broadcast-channel/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/broadcast-channel",
+        "main": "packages/broadcast-channel/src/index.ts",
+        "tsConfig": "packages/broadcast-channel/tsconfig.lib.json",
+        "assets": ["packages/broadcast-channel/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/broadcast-channel/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/broadcast-channel"],
+      "options": {
+        "jestConfig": "packages/broadcast-channel/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

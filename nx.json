@@ -1,12 +1,17 @@
 {
   "extends": "@nrwl/workspace/presets/core.json",
-  "npmScope": "broadcast-channel",
+  "npmScope": "lnsd",
   "affected": {
     "defaultBase": "main"
+  },
+  "workspaceLayout": {
+    "appsDir": "apps",
+    "libsDir": "packages"
   },
   "cli": {
     "defaultCollection": "@nrwl/workspace"
   },
+  "defaultProject": "broadcast-channel",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",

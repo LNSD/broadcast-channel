@@ -1,0 +1,10 @@
+{
+  "name": "@lsnd/broadcast-channel",
+  "author": "Lorenzo Delgado <lorenzodelgado.dev@gmail.com>",
+  "version": "1.0.0",
+  "dependencies": {
+    "@ungap/event-target": "^0.2.3",
+    "@ungap/structured-clone": "^0.3.4",
+    "oblivious-set": "^1.0.0"
+  }
+}
