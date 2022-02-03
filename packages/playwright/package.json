@@ -1,0 +1,57 @@
+{
+  "name": "@lnsd/nx-playwright",
+  "version": "1.0.0",
+  "description": "Playwright plugin for Nx",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lnsd/nx-plugins.git",
+    "directory": "packages/playwright"
+  },
+  "keywords": [
+    "Monorepo",
+    "Angular",
+    "React",
+    "Web",
+    "Node",
+    "Nest",
+    "Jest",
+    "Cypress",
+    "Playwright",
+    "CLI"
+  ],
+  "main": "./index.js",
+  "typings": "./index.d.ts",
+  "author": "Lorenzo Delgado",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lnsd/nx-plugins/issues"
+  },
+  "builders": "./executors.json",
+  "dependencies": {
+    "@nrwl/devkit": "*",
+    "@nrwl/linter": "*",
+    "@nrwl/workspace": "*",
+    "@cypress/webpack-preprocessor": "^5.9.1",
+    "chalk": "4.1.0",
+    "enhanced-resolve": "^5.8.3",
+    "ts-loader": "^9.2.6",
+    "tsconfig-paths": "^3.9.0",
+    "tsconfig-paths-webpack-plugin": "3.5.2",
+    "webpack-node-externals": "^3.0.0",
+    "fork-ts-checker-webpack-plugin": "6.2.10",
+    "rxjs": "^6.5.4",
+    "tslib": "^2.3.0"
+  },
+  "peerDependencies": {
+    "playwright": "^1.18.1",
+    "@playwright/test": "^1.18.1"
+  },
+  "peerDependenciesMeta": {
+    "playwright": {
+      "optional": true
+    },
+    "@playwright/test": {
+      "optional": true
+    }
+  }
+}

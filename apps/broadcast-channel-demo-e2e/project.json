@@ -1,0 +1,32 @@
+{
+  "root": "apps/broadcast-channel-demo-e2e",
+  "sourceRoot": "apps/broadcast-channel-demo-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@lnsd/playwright:playwright",
+      "options": {
+        "playwrightConfig": "apps/broadcast-channel-demo-e2e/playwright.config.ts",
+        "outputDir": "../../dist/playwright/apps/broadcast-channel-demo-e2e/test-results",
+        "devServerTarget": "broadcast-channel-demo:serve"
+      },
+      "configurations": {
+        "headed": {
+          "headed": true
+        },
+        "debug": {
+          "debug": true
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/broadcast-channel-demo-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["broadcast-channel-demo"]
+}

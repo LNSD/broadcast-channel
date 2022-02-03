@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+@import "nes.css/css/nes.css";
+@import "@fontsource/press-start-2p/index.css";
+
+body {
+  padding: 2rem;
+  margin: auto;
+  max-width: 750px;
+}
+
+section {
+  margin-top: 1.5rem;
+}
+
+/* Message list */
+section.message-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.message-list {
+
+  & > .message {
+    display: flex;
+    margin-top: 2rem;
+    overflow-wrap: break-word;
+  }
+
+  & > .message > .nes-balloon {
+    max-width: 450px;
+  }
+
+  & > .message.-left {
+    align-self: flex-start;
+  }
+
+  & > .message.-right {
+    align-self: flex-end;
+  }
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+footer a {
+  color: #333;
+  text-decoration: none;
+}

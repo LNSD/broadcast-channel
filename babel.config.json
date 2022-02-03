@@ -1,0 +1,8 @@
+{
+  "babelrcRoots": [
+    "*"
+  ],
+  "presets": [
+    "@babel/preset-typescript"
+  ]
+}

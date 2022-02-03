@@ -1,6 +1,9 @@
 {
   "version": 2,
   "projects": {
-    "broadcast-channel": "packages/broadcast-channel"
+    "broadcast-channel": "packages/broadcast-channel",
+    "broadcast-channel-demo": "apps/broadcast-channel-demo",
+    "broadcast-channel-demo-e2e": "apps/broadcast-channel-demo-e2e",
+    "playwright": "packages/playwright"
   }
 }

@@ -1,0 +1,83 @@
+{
+  "title": "Playwright Target",
+  "description": "Playwright target option for Build Facade",
+  "type": "object",
+  "outputCapture": "pipe",
+  "cli": "nx",
+  "properties": {
+    "playwrightConfig": {
+      "type": "string",
+      "description": "The path of the playwright configuration file (e.g. playwright.config.js or playwright.config.ts)."
+    },
+    "outputDir": {
+      "type": "string",
+      "description": "The path to the output directory for artifacts produced by tests."
+    },
+    "devServerTarget": {
+      "type": "string",
+      "description": "Dev server target to run tests against."
+    },
+    "headed": {
+      "type": "boolean",
+      "description": "Displays the browser instead of running headlessly. Set this to 'true' if your run depends on a Chrome extension being loaded.",
+      "default": false
+    },
+    "record": {
+      "type": "boolean",
+      "description": "Whether or not Cypress should record the results of the tests",
+      "default": false
+    },
+    "parallel": {
+      "type": "boolean",
+      "description": "Whether or not Cypress should run its tests in parallel (CI only)",
+      "default": false
+    },
+    "browser": {
+      "type": "string",
+      "description": "The browser to run tests in.",
+      "enum": [
+        "chromium",
+        "firefox",
+        "webkit",
+        "all"
+      ]
+    },
+    "env": {
+      "type": "object",
+      "description": "A key-value Pair of environment variables to pass to Playwright runner"
+    },
+    "spec": {
+      "type": "string",
+      "description": "A comma delimited glob string that is provided to the Playwright runner to specify which spec files to run. i.e. '**examples/**,**actions.spec**"
+    },
+    "ignoreTestFiles": {
+      "type": "string",
+      "description": "A String or Array of glob patterns used to ignore test files that would otherwise be shown in your list of tests. Playwright uses minimatch with the options: {dot: true, matchBase: true}. We suggest using https://globster.xyz to test what files would match."
+    },
+    "reporter": {
+      "type": "string",
+      "description": "The reporter used during playwright run"
+    },
+    "reporterOptions": {
+      "type": "string",
+      "description": "The reporter options used. Supported options depend on the reporter."
+    },
+    "skipServe": {
+      "type": "boolean",
+      "description": "Skip dev-server build.",
+      "default": false
+    },
+    "tag": {
+      "type": "string",
+      "description": "A comma delimited list to identify a run with",
+      "aliases": [
+        "t"
+      ]
+    }
+  },
+  "additionalProperties": true,
+  "required": [
+    "playwrightConfig",
+    "outputDir"
+  ]
+}

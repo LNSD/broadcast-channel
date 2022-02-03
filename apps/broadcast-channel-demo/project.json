@@ -1,0 +1,58 @@
+{
+  "projectType": "application",
+  "root": "apps/broadcast-channel-demo",
+  "sourceRoot": "apps/broadcast-channel-demo/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/apps/broadcast-channel-demo",
+        "compiler": "babel",
+        "index": "apps/broadcast-channel-demo/src/index.html",
+        "baseHref": "/",
+        "main": "apps/broadcast-channel-demo/src/main.ts",
+        "polyfills": "apps/broadcast-channel-demo/src/polyfills.ts",
+        "tsConfig": "apps/broadcast-channel-demo/tsconfig.app.json",
+        "assets": [
+          "apps/broadcast-channel-demo/src/icons8-broadcasting-24.png"
+        ],
+        "styles": [
+          "apps/broadcast-channel-demo/src/styles.scss"
+        ],
+        "scripts": []
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "broadcast-channel-demo:build",
+        "hmr": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "apps/broadcast-channel-demo/**/*.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/apps/broadcast-channel-demo"
+      ],
+      "options": {
+        "jestConfig": "apps/broadcast-channel-demo/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import { MessageEvent } from '../types';
+import type { MessageEvent } from '../types';
 
 export const messageEvent = <T = any>(data: T): MessageEvent => (new MessageEvent('message', { data }));
 

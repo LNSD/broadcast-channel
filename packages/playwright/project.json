@@ -1,0 +1,68 @@
+{
+  "root": "packages/playwright",
+  "sourceRoot": "packages/playwright",
+  "projectType": "library",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "packages/playwright/jest.config.js",
+        "passWithNoTests": true
+      },
+      "outputs": ["coverage/packages/playwright"]
+    },
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "options": {
+        "outputPath": "build/packages/playwright",
+        "tsConfig": "packages/playwright/tsconfig.lib.json",
+        "main": "packages/playwright/src/index.ts",
+        "assets": [
+          {
+            "input": "packages/playwright",
+            "glob": "**/files/**",
+            "output": "/"
+          },
+          {
+            "input": "packages/playwright",
+            "glob": "**/files/**/.gitkeep",
+            "output": "/"
+          },
+          {
+            "input": "packages/playwright",
+            "glob": "**/*.json",
+            "ignore": ["**/tsconfig*.json", "project.json"],
+            "output": "/"
+          },
+          {
+            "input": "packages/playwright",
+            "glob": "**/*.js",
+            "ignore": ["**/jest.config.js"],
+            "output": "/"
+          },
+          {
+            "input": "packages/playwright",
+            "glob": "**/*.d.ts",
+            "output": "/"
+          },
+          "LICENSE"
+        ]
+      },
+      "outputs": ["{options.outputPath}"]
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "packages/playwright/**/*.ts",
+          "packages/playwright/**/*.spec.ts",
+          "packages/playwright/**/*.spec.tsx",
+          "packages/playwright/**/*.spec.js",
+          "packages/playwright/**/*.spec.jsx",
+          "packages/playwright/**/*.d.ts"
+        ]
+      },
+      "outputs": ["{options.outputFile}"]
+    }
+  }
+}

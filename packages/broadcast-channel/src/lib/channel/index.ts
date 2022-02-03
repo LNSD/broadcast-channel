@@ -16,11 +16,14 @@ function getOptimalChannel(...channels: ChannelFactory[]): ChannelFactory | null
   return factory;
 }
 
+export type {
+  Channel, ChannelFactory,
+  LocalStorageOptions,
+};
 
 export {
-  Channel, ChannelFactory,
   NativeChannel,
-  LocalStorageChannel, LocalStorageOptions,
+  LocalStorageChannel,
   FakeChannel,
   defaultChannelsList,
   getOptimalChannel,

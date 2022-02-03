@@ -16,9 +16,8 @@
     "esModuleInterop": true,
     "baseUrl": ".",
     "paths": {
-      "@lnsd/broadcast-channel": [
-        "packages/broadcast-channel/src/index.ts"
-      ]
+      "@lnsd/broadcast-channel": ["packages/broadcast-channel/src/index.ts"],
+      "@lnsd/playwright": ["packages/playwright/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
