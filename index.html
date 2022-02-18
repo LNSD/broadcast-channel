@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8'/>
+  <title>BroadcastChannel Demo</title>
+  <base href="/">
+  <meta name='viewport' content='width=device-width, initial-scale=1'/>
+  <link rel='icon' type='image/x-icon' href='icons8-broadcasting-24.png'/>
+
+  <link rel='stylesheet' href='styles.scss'/>
+<link rel="stylesheet" href="styles.css"></head>
+
+
+<body>
+<header>
+  <h1 id="title">BroadcastChannel</h1>
+  <p>
+    This is the demo page for the <a href="https://github.com/LNSD/broadcast-channel">broadcast-channel</a>
+    package.
+  </p>
+  <p>Open it in multiple tabs and send messages across them.</p>
+</header>
+
+<section class='nes-container with-title'>
+  <p class="title">Post message</p>
+  <div class='nes-field is-inline'>
+    <input type='text' id='message-input' placeholder='Insert message...' class='nes-input'>
+    <button type="button" id="submit-button" class="nes-btn is-primary is-disabled">Submit</button>
+  </div>
+</section>
+
+<section class='nes-container with-title'>
+  <p class="title">Messages</p>
+  <section class='message-list' id="messages">
+  </section>
+</section>
+
+<br/>
+
+<footer>
+  <p>
+    <span>Lorenzo Delgado &copy; 2022</span>
+    <span>-</span>
+    <a href="https://github.com/lnsd" target="_blank" rel="noopener">@LNSD</a>
+  </p>
+  <p>
+    <a target="_blank" href="https://icons8.com/icon/4160/broadcasting">Broadcasting</a> icon by <a target="_blank"
+                                                                                                    href="https://icons8.com">Icons8</a>
+  </p>
+</footer>
+
+<script src='./main.ts'></script>
+<script src="runtime.js" type="module"></script><script src="polyfills.js" type="module"></script><script src="vendor.js" type="module"></script><script src="main.js" type="module"></script></body>
+
+
+</html>
