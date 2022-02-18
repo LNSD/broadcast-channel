@@ -13,7 +13,6 @@
         "outputPath": "dist/apps/broadcast-channel-demo",
         "compiler": "babel",
         "index": "apps/broadcast-channel-demo/src/index.html",
-        "baseHref": "/",
         "main": "apps/broadcast-channel-demo/src/main.ts",
         "polyfills": "apps/broadcast-channel-demo/src/polyfills.ts",
         "tsConfig": "apps/broadcast-channel-demo/tsconfig.app.json",
